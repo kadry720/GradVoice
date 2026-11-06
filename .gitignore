@@ -20,3 +20,8 @@ Backend/.env
 # OS / misc
 .DS_Store
 Thumbs.db
+
+# Runtime data (uploaded CVs, generated candidate context, logs)
+Backend/uploads/
+Backend/runtime/
+*.log

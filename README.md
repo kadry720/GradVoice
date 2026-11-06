@@ -34,6 +34,7 @@ The application combines a Next.js frontend with two Flask services backed by Az
 - [Data Flow](#data-flow)
 - [Deployment Notes](#deployment-notes)
 - [Troubleshooting](#troubleshooting)
+- [Team](#team)
 
 ## Features
 
@@ -112,7 +113,7 @@ flowchart LR
 ## Repository Structure
 
 ```text
-HR-ADVISOR_full-master/
+GradVoice/
 +-- Backend/
 |   +-- agent.py                     # Voice agent Flask server
 |   +-- backend_server.py            # CV analysis Flask server
@@ -427,6 +428,13 @@ The frontend uses this proxy by default. Set `VOICE_BACKEND_URL` on the Next.js 
 | WebRTC connection fails | Install `aiortc` and `av`, check firewall/VPN settings, and verify `VOICE_BACKEND_URL` |
 | First CV analysis is slow | Flair is downloading or loading `flair/ner-english-large` |
 | Voice answers are not candidate-specific | Run a CV analysis first and confirm `Backend/runtime/voice_context/current_context.json` was updated |
+
+## Team
+
+GradVoice was built as a graduation project at **ESLSCA University** (Class of 2026) by a team of four.
+
+- **[Kadry Mostafa](https://github.com/kadry720)**, team lead. Designed and built the voice agent and the RAG / candidate-context injection layer that feeds CV analysis results into the interview, and integrated the full system end to end.
+- Built together with three teammates, including **[@Youkaku-1](https://github.com/Youkaku-1)**, who packaged the Android and iOS app with Capacitor.
 
 ## Project Status
 
